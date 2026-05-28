@@ -26,13 +26,20 @@ export default function Dashboard(): JSX.Element {
 
       {isLoading ? <p>Loading copilots...</p> : null}
       <div className="grid gap-4 md:grid-cols-2">
-        {copilots.map((copilot) => (
-          <CopilotCard
-            key={copilot.id}
-            copilot={copilot}
-            onOpen={(copilotId) => navigate(`/builder?copilotId=${copilotId}`)}
-          />
-        ))}
+        {Array.isArray(copilots) ? (
+          copilots.map((copilot) => (
+            <CopilotCard
+              key={copilot.id}
+              copilot={copilot}
+              onOpen={(copilotId) => navigate(`/builder?copilotId=${copilotId}`)}
+            />
+          ))
+        ) : (
+          <div className="col-span-full">
+            <p className="text-sm text-muted-foreground">Unexpected data returned from server.</p>
+            <pre className="mt-2 max-h-48 overflow-auto text-xs">{JSON.stringify(copilots, null, 2)}</pre>
+          </div>
+        )}
       </div>
 
       {isModalOpen ? (
