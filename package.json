@@ -1,0 +1,16 @@
+{
+  "name": "copilot-studio",
+  "private": true,
+  "scripts": {
+    "test": "npm run test:unit:frontend && npm run test:unit:backend",
+    "test:unit:frontend": "cd frontend && npm run test:run",
+    "test:unit:backend": "cd backend && .venv\\Scripts\\pytest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:codegen": "playwright codegen http://localhost:5173",
+    "test:automation": "npm run test && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0"
+  }
+}

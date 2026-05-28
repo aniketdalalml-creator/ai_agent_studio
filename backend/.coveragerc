@@ -1,0 +1,7 @@
+[run]
+omit =
+    app/db/client.py
+    app/services/*
+    app/middleware/audit.py
+    app/schemas/chat.py
+    app/schemas/knowledge.py

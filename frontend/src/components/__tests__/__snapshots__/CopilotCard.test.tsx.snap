@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CopilotCard > matches snapshot for visual regression 1`] = `
+<article
+  class="rounded-lg border p-4 shadow-sm"
+  data-testid="copilot-card"
+>
+  <div
+    class="flex items-start justify-between gap-2"
+  >
+    <h3
+      class="text-lg font-semibold"
+    >
+      Support Bot
+    </h3>
+    <span
+      class="rounded-full border px-2 py-0.5 text-xs font-semibold bg-teal/10 text-teal border-teal/30"
+    >
+      ACTIVE
+    </span>
+  </div>
+  <p
+    class="mt-2 text-sm text-slate-600"
+  >
+    Handles customer support queries
+  </p>
+  <div
+    class="mt-4 flex flex-wrap gap-3 text-sm text-slate-700"
+  >
+    <span>
+      450
+       conversations
+    </span>
+    <span>
+      claude-sonnet-4-6
+    </span>
+  </div>
+  <div
+    class="mt-4 flex items-center justify-between"
+  >
+    <button
+      class="rounded bg-primary px-3 py-1.5 text-sm text-white"
+      type="button"
+    >
+      Open Builder
+    </button>
+    <button
+      aria-label="more options"
+      class="px-2 text-lg"
+      type="button"
+    >
+      ...
+    </button>
+  </div>
+</article>
+`;
